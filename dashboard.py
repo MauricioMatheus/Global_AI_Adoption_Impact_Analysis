@@ -36,13 +36,13 @@ anos_selecionados = st.sidebar.slider(
     value=(ano_min, ano_max) #Definindo o intervalo padrão como todos os anos
 )
 
-# Criando um dataframe filtrado contendo apenas dados correspondentes às escolhas do usário
+# criando um dataframe filtrado contendo apenas dados correspondentes às escolhas do usário
 df_filtrado = df[
     (df['country'].isin(paises_selecionados)) &
     (df['year'].between(anos_selecionados[0], anos_selecionados[1]))
 ]
 
-# Título principal do Dashboard
+# título principal do Dashboard
 
 st.title("🌎 Dashboard Interativo de Adoção de IA")
 st.markdown("Use os filtros na barra lateral para explorar os dados na aba de dados gerais")
